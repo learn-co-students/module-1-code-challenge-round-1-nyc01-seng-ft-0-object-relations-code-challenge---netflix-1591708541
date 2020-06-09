@@ -12,7 +12,7 @@ class Movie
     @@all
   end
 
-  #def title returns the movie title -- not necessary with accessor? 
+  #title returns the movie title -- not necessary with accessor? 
   #end 
 
   def reviews #returns array of all review instances for movie
@@ -34,6 +34,7 @@ class Movie
     Review.all.max_by(1) {|movie| movie.average_rating}
     #max by is an iterator that pulls highest value | 1 means we just want THE highest
     #look at all moviews avg ratings
-  end 
+  end
+  
 
 end

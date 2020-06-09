@@ -12,7 +12,7 @@ class Viewer
     @@all
   end
 
-  #def username -returns username -- not nececsarry with accessor? 
+  #username -returns username -- not nececsarry with accessor? 
   #end 
 
   def reviews #returns array of review instances associated with viewer instance
@@ -30,7 +30,9 @@ class Viewer
       true #return true
     else 
       false
-  end 
+    end
+  end
+  
 
 
   def rate_movie (movie, rating) 
@@ -39,6 +41,8 @@ class Viewer
       Review.new(self, movie, rating)#create new review instance
     else #if viewer already reviewed, 
       #assign new rating to existing review instance
-  end 
+    end
+  end
+ 
   
 end
