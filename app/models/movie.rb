@@ -24,4 +24,17 @@ class Movie
     end
   end
 
+  def average_rating
+    reviews.select do |review|
+      review.rating 
+    end.sum / Movie.all.length
+  end
+
+  def self.highest_rated
+    reviews.max_by do |review|
+      review.rating
+    end
+  end
+
+
 end

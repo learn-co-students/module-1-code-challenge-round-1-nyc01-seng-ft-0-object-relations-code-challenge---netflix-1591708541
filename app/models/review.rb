@@ -15,7 +15,7 @@ class Review
     end
 
     def viewer
-        Review.all.map do |review|
+        Review.all.select do |review|
             review.viewer
         end
     end
