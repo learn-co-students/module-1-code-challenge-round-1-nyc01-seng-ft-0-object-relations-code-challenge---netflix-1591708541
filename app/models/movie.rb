@@ -1,11 +1,11 @@
 class Movie
-  attr_accessor :title, :review
+  attr_accessor :title, 
 
   @@all = []
 
-  def initialize(title, review)
+  def initialize(title)
     @title = title
-    @review = review
+    
     self.class.all << self
   end
 
@@ -17,7 +17,7 @@ def self.title
   @title
 end 
 def self.average_rating
-  self.rating / rating 
+  Review.rating / rating 
 end
 
 def highest_rated
