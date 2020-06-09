@@ -9,6 +9,17 @@ class Review
     @rating = args[:rating]
     @@all << self
   end
+  
+
+
+
+
+  ##  CLASS METHODS  ##
+  def self.all
+    @@all
+  end
+  
+
 
 
 end
