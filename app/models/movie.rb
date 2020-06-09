@@ -11,8 +11,24 @@ class Movie
     @@all
   end
 
-  def title
-    @title
+  def reviews
+    Review.all.select { |review| review.movie == self }
   end
+
+  def reviewers
+    reviews.map { |review| review.viewer }
+  end
+
+  def average_rating
+    reviews.sum { |review| review.rating } / reviews.length
+  end
+
+  def self.highest_rated
+    Movie.all.max_by { |movie| movie.average_rating }
+  end
+
+  #def title
+  #  @title
+  #end
 
 end

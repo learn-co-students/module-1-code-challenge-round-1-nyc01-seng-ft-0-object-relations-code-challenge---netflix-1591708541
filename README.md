@@ -92,7 +92,7 @@ Some of the methods listed are provided to you in the starter code. You should c
 #### Movie
 
 - `Movie#reviews`
-  - returns an array of all the `Review` instances for the `Movie`.
+turns an array of all the `Review` instances for the `Movie`.
 - `Movie#reviewers`
   - returns an array of all of the `Viewer` instances that reviewed the `Movie`.
 
