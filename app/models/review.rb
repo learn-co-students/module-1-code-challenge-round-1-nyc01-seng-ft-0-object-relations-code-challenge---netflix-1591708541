@@ -1,5 +1,5 @@
 class Review
-    attr_reader :rating, :viewer, :movie
+    attr_accessor :rating, :viewer, :movie
     @@all = []
 
     def initialize(viewer,movie,rating)
