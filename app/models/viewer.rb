@@ -1,5 +1,5 @@
 class Viewer
-  attr_accessor :username
+  attr_accessor :username, :rating
 
   @@all = []
 
