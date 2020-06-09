@@ -35,6 +35,17 @@ class Viewer
    end
   end
 
+  def rate_movie(movie, rating)
+    movie_to_rate=reviews.select do |review|
+      review.movie == movie
+    end
+    if movie_to_rate 
+      review.rating = rating
+    else
+      Review.new(self, movie, rating)
+    end
+  end
+
   
 
   
