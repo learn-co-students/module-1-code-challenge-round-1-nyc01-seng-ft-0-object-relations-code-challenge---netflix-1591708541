@@ -28,7 +28,23 @@ class Movie
     self.reviews.map{|rev_obj| rev_obj.viewer}
   end
 
+  def average_rating
+  sum = self.reviews.inject(0){|sum,rev_obj| sum + rev_obj.rating}
+  sum.to_f / self.reviews.length.to_f
+  end
+
+
+
 end
+
+
+# #### Movie
+
+    # - `Movie#average_rating`
+#   - returns the average of all ratings for the `Movie` instance
+#   - to average ratings, add all ratings together and divide by the total number of ratings.
+# - `Movie.highest_rated`
+#   - returns the `Movie` instance with the highest average rating.
 
 
 #### Movie
