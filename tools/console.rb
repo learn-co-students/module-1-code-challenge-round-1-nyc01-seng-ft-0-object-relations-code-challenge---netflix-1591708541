@@ -32,7 +32,8 @@ pretty_good = Review.new(corey, matrix, 5)
 ok          = Review.new(corey, matrix, 6)
 # expect 7 for matrix average
 
-
+############### ACTION ITEMS ##################
+# viewer.reviewed_movie? #=> boolean as well as movie object instead of just boolean
 
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
