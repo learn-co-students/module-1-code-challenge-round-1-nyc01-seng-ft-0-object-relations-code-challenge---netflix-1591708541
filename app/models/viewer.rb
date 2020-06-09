@@ -24,5 +24,18 @@ class Viewer
     end
   end
 
+  def reviewed_movie?(movie)
+   movie_reviewed = reviews.select do |movie|
+      review.movie == movie
+   end
+   if movie_reviewed
+    true
+   else 
+    false
+   end
+  end
+
+  
+
   
 end
