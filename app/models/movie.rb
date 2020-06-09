@@ -12,4 +12,12 @@ class Movie
     @@all
   end
 
+  def reviews
+    Review.all.select {|review| review == self}
+  end 
+
+  def reviewers
+    Review.all.select {|review| review == self}
+  end 
+
 end
