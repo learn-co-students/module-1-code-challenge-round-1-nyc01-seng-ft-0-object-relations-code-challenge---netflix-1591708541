@@ -45,6 +45,9 @@ viewer_one.reviewed_movie?(movie_two)
 viewer_one.rate_movie(movie_two, 9)
 viewer_one.rate_movie(movie_one, 10)
 
+movie_two.average_rating
+Movie.highest_rated
+
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
 0
