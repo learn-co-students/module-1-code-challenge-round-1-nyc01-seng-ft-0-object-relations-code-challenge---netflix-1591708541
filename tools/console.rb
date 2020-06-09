@@ -20,6 +20,13 @@ tim = Viewer.new("Tim")
 
 # Make tim review titanic
 Review.new(tim, titanic, 3.0)
+Review.new(tim, lion_king, 4.0)
+Review.new(tim, movie_name, 5.0)
+
+# Make tim review titanic
+Review.new(tom, titanic, 2.0)
+Review.new(tam, lion_king, 1.0)
+Review.new(tom, movie_name, 3.0)
 
 
 

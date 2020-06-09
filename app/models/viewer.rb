@@ -10,7 +10,7 @@ class Viewer
 
   def reviews
     # returns an array of `Review` instances associated with the `Viewer` instance.
-    Review.all.select{|reivew| review.viewer == self}
+    Review.all.select{|review| review.viewer == self}
   end
 
   def reviewed_movies

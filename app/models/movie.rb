@@ -23,7 +23,7 @@ class Movie
     # returns the average of all ratings for the `Movie` instance
     number_of_reviews = reviews.size
     if number_of_reviews <= 0
-      return "Not enough reviews"
+      return 0
     end
 
     total_ratings = reviews.sum{|review| review.rating}
