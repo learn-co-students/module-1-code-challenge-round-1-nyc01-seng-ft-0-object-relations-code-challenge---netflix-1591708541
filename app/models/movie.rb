@@ -12,4 +12,8 @@ class Movie
     @@all
   end
 
+def` 
+
+end 
+
 end
