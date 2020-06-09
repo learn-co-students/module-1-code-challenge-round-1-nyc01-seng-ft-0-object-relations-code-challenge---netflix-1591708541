@@ -25,7 +25,8 @@ class Movie
   end
 
   def average_rating
-      Review.all.map do |review| #add up all ratings from the array that the reviews produces. Then divide that sum by the amount of elements in that array
+      sum = 0
+    Review.all.map do |review| #add up all ratings from the array that the reviews produces. Then divide that sum by the amount of elements in that array
         review.rating += sum
       end
       avg = sum / Review.all.count 
