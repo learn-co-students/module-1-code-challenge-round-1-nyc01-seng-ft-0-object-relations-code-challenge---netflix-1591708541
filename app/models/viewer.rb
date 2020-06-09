@@ -66,18 +66,30 @@ class Viewer
   # returns `true` if the `Viewer` has reviewed this `Movie` (if there is a `Review`     instance that has this `Viewer` and `Movie`), returns `false` otherwise
   def reviewed_movie?(beef)
     reviewed_movies.each do |movie|
-      p (movie.title == beef)
+      if movie.title == beef
+        puts true
+      else
+        puts false
+      end
     end
   end
 
   #   - if the `Viewer` instance and the passed `Movie` instance are _not_ already associated, this method should create a new `Review` instance
   #   - if this `Viewer` has already reviewed this `Movie`, assigns the new rating to the existing `Review` instance
 
-  def rate_movie(movie, rating)
+  # def rate_movie(beef, score)
+  #   reviewed_movies.each do |movie|
+  #     if movie.title != beef
+  #       # (viewer, movie, rating) /// Review init
+  #       Review.new(self, beef, score)
+  #     else
+  #       movie.rating = score
+  #     end
+  #   end
+  # end
+   
     
-    # (viewer, movie, rating) /// Review init
-    Review.new(self, movie, rating)
-  end
+
 
 
 
