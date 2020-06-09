@@ -12,7 +12,8 @@ class Movie
     @@all
   end
 
-  def reviews
+
+  def reviews 
     Review.all.select {|review| review == self}
   end 
 
