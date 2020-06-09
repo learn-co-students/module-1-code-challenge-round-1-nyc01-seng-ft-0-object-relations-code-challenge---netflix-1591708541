@@ -15,5 +15,13 @@ class Viewer
   def self.username
     @username
   end 
+
+  def reviewed_movie?(movie)
+    if review==review.viewer &&review.movie
+      true
+    else
+      false
+    end 
+  end 
   
 end
