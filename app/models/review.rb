@@ -16,9 +16,25 @@ class Review
     # def rating
     #     @rating
     # end
+
+#    def viewer
+#     @viewer
+#    end
+
+    # def movie
+    #     @movie
+    # end
+
 end
 
 
+
+# #### Review
+
+        # - `Review#viewer`
+        #   - returns the `Viewer` instance associated with the `Review` instance
+        # - `Review#movie`
+        #   - returns the `Movie` instance associated with the `Review` instance
 
 # #### Review
 
@@ -28,3 +44,4 @@ end
         #   - returns the rating for the `Review` instance
         # - `Review.all`
         #   - returns an array of all initialized `Review` instances
+

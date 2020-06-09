@@ -19,9 +19,24 @@ class Viewer
   # def username
   #   @username
   # end
+
+  def reviews
+    Review.all.select{|rev_obj| rev_obj.viewer == self}
+  end
+
+  def reviewed_movies
+    self.reviews.map{|rev_obj| rev_obj.movie}
+  end
   
 end
 
+
+# #### Viewer
+
+        # - `Viewer#reviews`
+        #   - returns an array of `Review` instances associated with the `Viewer` instance.
+        # - `Viewer#reviewed_movies`
+        #   - returns an array of `Movie` instances reviewed by the `Viewer` instance.
 
 # #### Viewer
 
