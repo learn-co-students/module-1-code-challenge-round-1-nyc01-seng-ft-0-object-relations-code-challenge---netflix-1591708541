@@ -14,6 +14,9 @@ movie_one = Movie.new("Okja")
 movie_two = Movie.new("Snowpiercer")
 movie_three = Movie.new("Parasite")
 
+movie_one.title
+Movie.all
+
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
 0
