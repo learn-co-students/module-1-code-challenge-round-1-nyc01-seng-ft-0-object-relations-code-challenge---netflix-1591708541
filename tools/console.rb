@@ -37,6 +37,9 @@ review_one.movie
 viewer_one.reviews
 viewer_one.reviewed_movies
 
+movie_one.reviews
+movie_one.reviewers
+
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
 0
