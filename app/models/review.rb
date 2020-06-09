@@ -22,17 +22,5 @@ attr_accessor :viewer, :movie, :review, :rating
     def self.all
         @@all
     end
-
-    def viewer
-        @@all.select do |viewer|
-            viewer.review == self
-        end
-    end
-
-    def movie
-        viewer.map do |viewer|
-            viewer.movie
-        end
-    end
     
 end
