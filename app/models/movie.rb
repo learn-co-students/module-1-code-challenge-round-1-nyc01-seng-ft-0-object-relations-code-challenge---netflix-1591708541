@@ -32,11 +32,14 @@ class Movie
   end
 
   def self.highest_rated
+  Review.all.max_by {|review| review.movie.average_rating}
   end
-
-  
-
-  
-
-
 end
+
+
+  
+
+  
+
+
+
