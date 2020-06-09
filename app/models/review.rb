@@ -15,8 +15,8 @@
     # - `Review.all`
     #   - returns an array of all initialized `Review` instances
 
-# - `Review#viewer`
-#   - returns the `Viewer` instance associated with the `Review` instance
+    # - `Review#viewer`
+    #   - returns the `Viewer` instance associated with the `Review` instance
 
 # - `Review#movie`
 #   - returns the `Movie` instance associated with the `Review` instance
@@ -25,7 +25,7 @@
 
 class Review
 
-    attr_reader :movie, :viewer
+    attr_reader :movie, :viewer, :rating
 
     # class variable contains each Review instance
     @@all = []
@@ -48,10 +48,9 @@ class Review
         self
     end
 
-    - `Review#viewer`
-      - returns the `Viewer` instance associated with the `Review` instance
-    def viewer
-        Review.all.select { |review|  }
+    # returns the `Viewer` instance associated with the `Review` instance
+    def review_viewer
+        Review.all.select { |review| review.viewer == self.viewer }
     end
 
 

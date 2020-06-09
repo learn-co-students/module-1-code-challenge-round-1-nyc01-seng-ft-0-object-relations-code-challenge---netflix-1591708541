@@ -67,9 +67,12 @@ class Movie
 #   - returns the average of all ratings for the `Movie` instance
 #   - to average ratings, add all ratings together and divide by the total number of ratings.
 
-  # def average_rating
-  #   movie_reviews.map { |review| review.rating }
-  # end
+  def average_rating
+   movie_reviews.map { |reviews| 
+   binding.pry
+  #  review.rating 
+  }
+  end
 
 
 
