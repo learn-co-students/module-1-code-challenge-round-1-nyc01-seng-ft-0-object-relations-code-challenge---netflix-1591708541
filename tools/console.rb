@@ -19,7 +19,7 @@ tom = Viewer.new("Tom")
 tim = Viewer.new("Tim")
 
 # Make tim review titanic
-
+Review.new(tim, titanic, 3.0)
 
 
 

@@ -21,8 +21,13 @@ class Movie
 
   def average_rating
     # returns the average of all ratings for the `Movie` instance
+    number_of_reviews = reviews.size
+    if number_of_reviews <= 0
+      return "Not enough reviews"
+    end
+
     total_ratings = reviews.sum{|review| review.rating}
-    (total_ratings / reviews.size).to_f
+    (total_ratings / number_of_reviews).to_f
   end
 
   def self.highest_rated
