@@ -21,7 +21,7 @@ def average_rating
 end
 
 def highest_rated
-  max=-1
+  max = -1
   best_film=Review.rating
   if max<best_film
     max=best_film
