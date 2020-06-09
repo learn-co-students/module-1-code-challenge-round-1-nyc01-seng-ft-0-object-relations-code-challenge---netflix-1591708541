@@ -31,6 +31,9 @@ review_three = Review.new(viewer_three, movie_three, 10)
 review_one.rating
 Review.all
 
+review_one.viewer
+review_one.movie
+
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
 0
