@@ -20,13 +20,23 @@ class Movie
   #   @title
   # end
 
+  def reviews
+    Review.all.select{|rev_obj| rev_obj.movie == self}
+  end
 
-
+  def reviewers
+    self.reviews.map{|rev_obj| rev_obj.viewer}
+  end
 
 end
 
 
+#### Movie
 
+        # - `Movie#reviews`
+        #   - returns an array of all the `Review` instances for the `Movie`.
+        # - `Movie#reviewers`
+        #   - returns an array of all of the `Viewer` instances that reviewed the `Movie`.
 
 # #### Movie
 
