@@ -33,8 +33,8 @@ class Viewer
     end
   end
 
-  def rate_movie(movie, rating)
-    Review.all.select do ||
+  # def rate_movie(movie, rating)
+  #   Review.all.select do ||
 
 
 end

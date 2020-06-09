@@ -24,6 +24,13 @@ class Movie
     end
   end
 
+  def average_rating
+    reviews.sum do |rating|
+      int = rating.rating
+      int/reviews.count
+    end
+  end
+
 
   # def self.highest_rated
   #   self.max do |rating|

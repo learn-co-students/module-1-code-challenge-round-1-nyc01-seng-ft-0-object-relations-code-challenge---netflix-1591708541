@@ -28,6 +28,7 @@ movie1 = Movie.new({title: "Lost"})
 movie2 = Movie.new({title: "Begin"})
 
 review1 = Review.new({viewer: "JK", movie: "Lost", rating:5})
+review3 = Review.new({viewer: "JK", movie: "Lost", rating:10})
 review2 = Review.new({viewer: "RL", movie: "Begin", rating:3})
 
 viewer1 = Viewer.new({username: "JK"})
