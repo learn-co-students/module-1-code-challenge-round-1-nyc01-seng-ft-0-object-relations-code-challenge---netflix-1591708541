@@ -24,10 +24,14 @@ class Viewer
   end
 
   def rate_movie(movie, rating)
-    # a `Movie` instance and a rating (number) are passed in as arguments
     # if the `Viewer` instance and the passed `Movie` instance are _not_ already associated, this method should create a new `Review` instance
-
     # if this `Viewer` has already reviewed this `Movie`, assigns the new rating to the existing `Review` instance
+    review = reviews.find{|review| review.movie == movie} # Returns review instance if there is one else nil
+    if !review
+      Review.new(self, movie, rating)
+    else
+      review.rating = rating
+    end
   end
 
   def self.all
