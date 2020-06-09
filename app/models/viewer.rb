@@ -23,7 +23,7 @@ class Viewer
   end
 
   def reviewed_movie?(movie)
-  	if reviewed_movies[0] == movie
+  	if reviewed_movies.find{|movie| movie.itself} == movie
   		true
   	else
   		false
@@ -31,5 +31,15 @@ class Viewer
   	end
   end
 
+  def rate_movie(movie, rating)  
+  	Review.new(self, movie, rating)
+  	raiting = 
+  	if reviewed_movie? == true 
+  		reviews
+  	end	
+  end
+
+
+# if this Viewer has already reviewed this Movie, assigns the new rating to the existing Review instance
 
 end
