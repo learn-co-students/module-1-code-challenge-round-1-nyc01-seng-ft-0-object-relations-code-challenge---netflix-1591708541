@@ -42,7 +42,7 @@ class Viewer
 
   def rate_movie(movie,rating)
     if self.reviewed_movie?(movie) == true
-      self.find_review.rating = rating
+      self.find_review(movie).rating = rating
     else
     Review.new(self,movie,rating)
     end
