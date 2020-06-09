@@ -10,6 +10,16 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
+#movies
+django = Movie.new("Django")
+
+#viewer
+adam = Viewer.new("aaltmark")
+
+#reviews
+django_review_1 = Review.new(adam, django, 10)
+
+
 
 
 
