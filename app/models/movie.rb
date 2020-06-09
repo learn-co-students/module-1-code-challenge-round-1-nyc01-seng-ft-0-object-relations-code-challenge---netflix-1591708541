@@ -24,8 +24,24 @@ class Movie
     end
   end
 
+  def ratings
+    self.reviews.map do |r|
+      r.rating
+    end
+  end
+
   def average_rating
-    
+    ratingArray = self.ratings
+    ratingArray.sum/ratingArray.count
+  end
+
+  def self.highest_rated
+    aoh = Movie.all.map do |m|
+      {m => m.average_rating}
+    end
+    aoh.max_by do |hash|
+      hash.values[0]
+    end.keys[0]
   end
 
 end
