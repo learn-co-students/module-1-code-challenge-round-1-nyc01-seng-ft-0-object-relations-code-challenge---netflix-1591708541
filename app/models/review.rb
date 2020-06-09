@@ -3,10 +3,10 @@ class Review
 
     @@all = []
 
-    def initialize(viewer, movie, rating)
-        @viewer = viewer
-        @movie = movie
-        @rating = rating
+    def initialize(hash)
+        @viewer = hash[:viewer]
+        @movie = hash[:movie]
+        @rating = hash[:rating]
         @@all << self
     end
 

@@ -3,8 +3,8 @@ class Movie
 
   @@all = []
 
-  def initialize(title)
-    @title = title
+  def initialize(hash)
+    @title = hash [:title]
     @@all << self
   end
 
@@ -14,10 +14,20 @@ class Movie
 
   def reviews
     Review.all.select do |review|
-      review.movie = @title
+      review.movie == @title
+    end
+  end
+
+  def reviewers
+    reviews.map do |movie|
+      movie.viewer
     end
   end
 
 
-  
+  # def self.highest_rated
+  #   self.max do |rating|
+  #     rating.
+  # end
+
 end

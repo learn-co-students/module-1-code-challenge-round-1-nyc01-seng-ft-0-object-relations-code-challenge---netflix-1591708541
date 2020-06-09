@@ -11,11 +11,11 @@ class Review
 
   @@all = []
 
-  def initialize(viewer, movie, rating)
-    @viewer = viewer
-    @movie = movie
-    @rating = rating
-      @@all << self
+  def initialize(hash)
+    @viewer = hash[:viewer]
+    @movie = hash[:movie]
+    @rating = hash[:rating]
+    @@all << self
   end
 
   def self.all
@@ -24,14 +24,14 @@ class Review
 
 end
 
-movie1 = Movie.new("Lost")
-movie2 = Movie.new("Begin")
+movie1 = Movie.new({title: "Lost"})
+movie2 = Movie.new({title: "Begin"})
 
-review1 = Review.new("JK", "Lost", 5)
-review2 = Review.new("RL", "Begin", 3)
+review1 = Review.new({viewer: "JK", movie: "Lost", rating:5})
+review2 = Review.new({viewer: "RL", movie: "Begin", rating:3})
 
-viewer1 = Viewer.new("JK")
-viewer2=  Viewer.new("RL")
+viewer1 = Viewer.new({username: "JK"})
+viewer2=  Viewer.new({username: "RL"})
 
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
