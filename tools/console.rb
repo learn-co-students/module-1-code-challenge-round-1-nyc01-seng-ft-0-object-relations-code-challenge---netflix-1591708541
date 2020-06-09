@@ -6,12 +6,32 @@ def reload
   load 'config/environment.rb'
 end
 
-# Insert code here to run before hitting the binding.pry
-# This is a convenient place to define variables and/or set up new object instances,
-# so they will be available to test and play around with in your console
+class Review
+  attr_accessor :viewer, :movie, :rating
 
+  @@all = []
 
+  def initialize(viewer, movie, rating)
+    @viewer = viewer
+    @movie = movie
+    @rating = rating
+      @@all << self
+  end
 
+  def self.all
+      @@all
+  end
+
+end
+
+movie1 = Movie.new("Lost")
+movie2 = Movie.new("Begin")
+
+review1 = Review.new("JK", "Lost", 5)
+review2 = Review.new("RL", "Begin", 3)
+
+viewer1 = Viewer.new("JK")
+viewer2=  Viewer.new("RL")
 
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #

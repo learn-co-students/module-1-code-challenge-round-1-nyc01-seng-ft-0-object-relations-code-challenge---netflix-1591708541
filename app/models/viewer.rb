@@ -5,11 +5,21 @@ class Viewer
 
   def initialize(username)
     @username = username
-    self.class.all << self
+    @@all << self
   end
 
   def self.all
     @@all
   end
+
+  def reviews
+    Review.all.select do |review|
+      review.viewer = @username
+    end
+  end
   
+  # def reviewed_movies
+  #   reviews.map do ||
+
+
 end
