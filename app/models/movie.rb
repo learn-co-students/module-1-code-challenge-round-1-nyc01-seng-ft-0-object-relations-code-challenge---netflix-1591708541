@@ -36,7 +36,14 @@ class Movie
     a = Movie.all.map do |movie|
       movie.average_rating
     end
+
     a.max
   end
+  #also tried
+  #def self.highest_rating
+   # Movie.all.max_by do |movie|
+    #  movie.average_rating
+    #end
+  #end
 
 end
