@@ -28,7 +28,7 @@ fargo = Movie.new("Fargo")
 # REVIEW
 review1 = Review.new(josh, avatar, 4.9 )
 review2 = Review.new(andy, starwars, 3 )
-review3 = Review.new(brian, clockwork_orange, 5 )
+review3 = Review.new(andy, clockwork_orange, 5 )
 review4 = Review.new(adam, toy_story, 4 )
 review5 = Review.new(adam, fargo, 4 )
 review5 = Review.new(adam, avatar, 2 )

@@ -27,14 +27,23 @@ class Movie
   end
 
   def self.highest_rated
-  	max_rating = 0 
-  	highest_rated = nil
 
-	ratingarr = Review.all.select{|review|review.viewer}
-		ratingarr2 = ratingarr.map{|viewer|viewer}
-
-		p raitingarr2
-    # rating
+	all_scores = Review.all.map{|review|review.rating}
+	all_scores.max_by{|score|}
 
   end
 end
+
+
+
+  # 	h = {}
+
+  # 	all_viewers = Review.all.map{|review|review.viewer}
+  # 	all_reviews = Review.all.map{|review|review.rating}
+
+
+  # 	if all_viewers == true
+  # 		"hello"
+  # 	else
+		# hash h.merge!(all_viewers all_reviews) 
+  # 	end

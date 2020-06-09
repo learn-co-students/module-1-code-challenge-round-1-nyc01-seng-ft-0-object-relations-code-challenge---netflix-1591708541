@@ -23,7 +23,7 @@ class Viewer
   end
 
   def reviewed_movie?(movie)
-  	if reviewed_movies.find{|movie| movie.itself} == movie
+  	if reviewed_movies.find{|film| film == movie} 
   		true
   	else
   		false
@@ -31,12 +31,16 @@ class Viewer
   	end
   end
 
+  def ratings
+  	reviews.map{|review| review.rating}
+  end
+
   def rate_movie(movie, rating)  
-  	Review.new(self, movie, rating)
-  	raiting = 
-  	if reviewed_movie? == true 
-  		reviews
-  	end	
+  	# if reviewed_movie? == true
+  	# 	movie.raiting = rating
+  	# else
+  	  	Review.new(self, movie, rating)
+  	# end	
   end
 
 
