@@ -32,7 +32,7 @@ class Viewer
   #to to the existing review. I think what i would do is an if statement 
   #so if self.movie does not qual reviewed movie then allow user to
   #enter new review, then if viewer has already reviewed it we would
-  #shovel it into the existing review instance
+  #shovel it into the existing review instance.
   
   def rate_movie(movie,rating)
     Review.new(movie,self,rating)
