@@ -14,4 +14,9 @@ class Review
     def self.all
         @@all 
     end 
+
+    def viewer
+        Review.all.select {|review| review.viewer == self}
+    end 
 end
+
