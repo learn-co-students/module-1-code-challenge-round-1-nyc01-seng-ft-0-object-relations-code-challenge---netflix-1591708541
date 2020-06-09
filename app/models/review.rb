@@ -1,13 +1,13 @@
 class Review
     attr_reader :rating
-
+    
     @@all = []
 
     def initialize (viewer, movie, rating)
         @viewer = viewer
         @movie = movie
         @rating = rating
-        @@all << self
+        self.class.all << self
     end
 
     def self.all
@@ -16,7 +16,7 @@ class Review
 
     def viewer
         Review.all.select do |review|
-            review.viewer
+            review.viewer 
         end
     end
 
