@@ -1,7 +1,7 @@
 class Review
     #sst class
 
-    attr_reader :viewer, :movie, :rating
+    attr_accessor :viewer, :movie, :rating
 
     @@all = []
 
