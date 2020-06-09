@@ -24,4 +24,19 @@ class Movie
     end
   end
 
+  def average_rating
+    a = self.reviews.map do |reviews|
+      reviews.rating
+    end
+
+    a.sum(0.0)/a.size
+  end
+
+  def self.highest_rating
+    a = Movie.all.map do |movie|
+      movie.average_rating
+    end
+    a.max
+  end
+
 end

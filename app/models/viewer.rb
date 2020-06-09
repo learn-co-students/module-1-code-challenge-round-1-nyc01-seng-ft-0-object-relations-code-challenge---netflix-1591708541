@@ -23,5 +23,18 @@ class Viewer
       reviews.movie
     end
   end
-  
+
+  def reviewed_movie?(movie)
+    self.reviewed_movies.include?(movie)
+  end
+
+  def rate_movie(movie, rating)
+    if self.reviewed_movie?(movie)
+      self.reviews.find do |review|
+        review.movie == movie
+      end.rating = rating
+    else 
+      Review.new(self, movie, rating)
+    end 
+  end
 end
