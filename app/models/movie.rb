@@ -32,7 +32,11 @@ class Movie
 
   def average_rating
     ratingArray = self.ratings
-    ratingArray.sum/ratingArray.count
+    if ratingArray.count == 0
+      0
+    else
+      ratingArray.sum/ratingArray.count
+    end
   end
 
   def self.highest_rated

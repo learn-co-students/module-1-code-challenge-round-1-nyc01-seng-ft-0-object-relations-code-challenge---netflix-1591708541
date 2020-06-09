@@ -30,9 +30,9 @@ class Viewer
 
   def rate_movie(movie, rating)
     if self.reviewed_movie?(movie)
-      self.reviews.select do |r|
+      self.reviews.find do |r|
         r.movie == movie
-      end[0].rating=(rating)
+      end.rating=(rating)
     else
       Review.new(self, movie, rating)
     end

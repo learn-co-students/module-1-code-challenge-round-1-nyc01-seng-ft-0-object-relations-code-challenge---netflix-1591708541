@@ -19,7 +19,7 @@ m6 = Movie.new("Movie6")
 m7 = Movie.new("Movie7")
 
 v1 = Viewer.new("username")
-v1.title=("Viewer1")
+v1.username=("Viewer1")
 v2 = Viewer.new("Viewer2")
 v3 = Viewer.new("Viewer3")
 v4 = Viewer.new("Viewer4")
