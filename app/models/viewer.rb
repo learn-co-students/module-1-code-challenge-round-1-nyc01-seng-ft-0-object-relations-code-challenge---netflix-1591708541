@@ -20,6 +20,15 @@ class Viewer
     reviews.map { |r| r.movie}
   end
 
+  def reviewed_movie?(movie)
+    movie.reviews.any? { |r| r.viewer == self }
+  end
+
+  def rate_movie(args)
+    Rating.new(viewer: self, movie: args[:movie], rating: args[:rating])
+  end
+  
+  
 
   
 end

@@ -15,6 +15,15 @@ class Movie
   def reviewers
     reviews.map { |r| r.viewer }
   end
+
+  def ratings
+    reviews.map { |r| r.rating }
+  end
+  
+  def average_rating
+    ratings.sum.to_f / ratings.count 
+  end
+  
   
 
 
@@ -27,5 +36,7 @@ class Movie
 
 
   
+
+end
 
 end

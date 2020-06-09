@@ -24,6 +24,10 @@ end
 terminator = Movie.new('terminator')
 incredible = Movie.new('incredible')
 
+  ## let's add some unreviewed movies
+  batman = Movie.new('batman')
+  knight = Movie.new('the dark knight')
+
 ## let's add some viewers
 berel = Viewer.new('berel')
 tashawn = Viewer.new('tashawn')
