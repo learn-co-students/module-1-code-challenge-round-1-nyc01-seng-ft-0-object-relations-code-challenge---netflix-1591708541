@@ -18,10 +18,19 @@ class Movie
   end
 
   def reviewers
-      #iterate through reviews array and select movie == self
-      reviewes = Review.all.select {|review| review.movie == self}
-      #iterate through new array and select viewers
-      reviews.viewer
+    self.reviews.map {|review| review.viewer} 
+  end
+
+  def average_rating                # I want to automatically make this a float. For now, reviews are initialized manually as a float.
+    rating = 0
+    reviews.map do |review|
+      rating += review.rating
+    end
+    rating / reviews.length
+  end
+
+  def self.highest_rated
+
   end
 
 end

@@ -1,5 +1,6 @@
 class Review
-    attr_reader :viewer, :movie, :rating
+    attr_reader :viewer, :movie
+    attr_accessor :rating               #changed to an accessor for Viewer#rate_movie
     @@all = []
     def initialize(viewer, movie, rating)
         @viewer = viewer
