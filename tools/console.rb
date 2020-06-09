@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 # require and load the environment file
 require_relative '../config/environment.rb'
 
@@ -12,7 +22,11 @@ end
 
 
 
+terminator = Movie.new('terminator')
+incredible = Movie.new('incredible')
 
+berel = Viewer.new('berel')
+tashawn = Viewer.new('tashawn')
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
