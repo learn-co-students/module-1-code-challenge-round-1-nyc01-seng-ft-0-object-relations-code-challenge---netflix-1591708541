@@ -10,9 +10,9 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
-
-
-
+movie_one = Movie.new("Okja")
+movie_two = Movie.new("Snowpiercer")
+movie_three = Movie.new("Parasite")
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
