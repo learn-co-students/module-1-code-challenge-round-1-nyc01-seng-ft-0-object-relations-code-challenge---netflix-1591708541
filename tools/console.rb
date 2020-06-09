@@ -26,6 +26,7 @@ review1 = Review.new(mia, movie1, 5)
 review2 = Review.new(lisa, movie2, 4)
 review3 = Review.new(steve, movie3, 3)
 review4 = Review.new(sam, movie4, 2)
+review5 = Review.new(lisa, movie1, 4)
 
 
 

@@ -13,8 +13,13 @@ class Viewer
   end
   
 
+  def reviews
+    Review.all.select {|review| review.viewer == self}
+  end
 
-
+  def reviewed_movies
+    reviews.map {|rating| rating.movie}
+  end
 
 end
 
@@ -27,6 +32,12 @@ end
 #   - returns the Viewer's username
 # - `Viewer.all`
 #   - returns an array of all the Viewer instances that have been initialized
+
+# - `Viewer#reviews`
+#   - returns an array of `Review` instances associated with the `Viewer` instance.
+# - `Viewer#reviewed_movies`
+#   - returns an array of `Movie` instances reviewed by the `Viewer` instance.
+
 
 # - `Viewer#reviewed_movie?(movie)`
 #   - a `Movie` instance is the only argument

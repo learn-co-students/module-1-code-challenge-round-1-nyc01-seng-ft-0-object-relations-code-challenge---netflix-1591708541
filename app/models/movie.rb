@@ -12,13 +12,20 @@ class Movie
     @@all
   end
 
-
   def title
-    Movie.all.select do |movie|
-    movie.title == self
+    Movie.all.select do |title|
+    title.movie == self
     end
+
   end
 
+  def reviews
+    Review.all.select {|review| review.movie == self}
+  end
+
+  def reviewers
+    reviews.map {|movie| movie.viewer}
+  end
 
 end
 
@@ -32,3 +39,8 @@ end
 #   - returns the `Movie`'s title
 # - `Movie.all`
 #   - returns an array of all the `Movie` instances that have been initialized
+
+# - `Movie#reviews`
+#   - returns an array of all the `Review` instances for the `Movie`.
+# - `Movie#reviewers`
+#   - returns an array of all of the `Viewer` instances that reviewed the `Movie`.
