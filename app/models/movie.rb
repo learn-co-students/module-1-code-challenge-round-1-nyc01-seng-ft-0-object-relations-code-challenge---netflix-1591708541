@@ -25,25 +25,27 @@ class Movie
   end
 
   def average_rating
-    a = self.reviews.map do |reviews|
-      reviews.rating
-    end
-
-    a.sum(0.0)/a.size
+    reviews.sum { |review| review.rating } / reviews.length
   end
 
   def self.highest_rating
-    a = Movie.all.map do |movie|
+    Movie.all.max_by do |movie|
       movie.average_rating
     end
-
-    a.max
   end
-  #also tried
-  #def self.highest_rating
-   # Movie.all.max_by do |movie|
-    #  movie.average_rating
-    #end
-  #end
+
+  # def average_rating
+  #   a = self.reviews.map do |reviews|
+  #     reviews.rating
+  #   end
+  #  a.sum(0.0)/a.size
+  # end
+
+  # def self.highest_rating
+  #   a = Movie.all.map do |movie|
+  #     movie.average_rating
+  #   end
+  #   a.max
+  # end
 
 end
