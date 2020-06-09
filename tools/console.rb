@@ -24,6 +24,13 @@ viewer_three = Viewer.new("eric")
 viewer_one.username
 Viewer.all
 
+review_one = Review.new(viewer_one, movie_one, 8)
+review_two = Review.new(viewer_two, movie_two, 7)
+review_three = Review.new(viewer_three, movie_three, 10)
+
+review_one.rating
+Review.all
+
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
 0
