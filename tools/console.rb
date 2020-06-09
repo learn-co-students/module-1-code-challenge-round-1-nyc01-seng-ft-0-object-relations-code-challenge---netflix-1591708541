@@ -40,6 +40,8 @@ viewer_one.reviewed_movies
 movie_one.reviews
 movie_one.reviewers
 
+viewer_one.reviewed_movie?(movie_two)
+
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
 0
