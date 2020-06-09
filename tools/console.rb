@@ -12,12 +12,15 @@ end
 
 movie1 = Movie.new("Jaws")
 movie2 = Movie.new("Pan's Labrynth")
+movie3 = Movie.new("Gladiator")
 
 viewer1 = Viewer.new("Kate")
 viewer2 = Viewer.new("Paola")
 
-review1 = Review.new(viewer1, movie1, 8)
+
+review1 = Review.new(viewer1, movie2, 8)
 review2 = Review.new(viewer2, movie2, 10)
+review3 = Review.new(viewer2, movie3, 9)
 
 
 
