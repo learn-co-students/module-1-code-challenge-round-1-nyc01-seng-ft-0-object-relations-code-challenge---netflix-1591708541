@@ -13,4 +13,18 @@ class Movie
     @@all
   end
 
+  def reviews
+    Review.all.select do |review|
+      review.movie == self
+    end
+  end
+
+  def reviewers
+    Review.all.select do |review|
+      if review.movie == self
+        review.viewer.name
+      end
+    end
+  end
+
 end

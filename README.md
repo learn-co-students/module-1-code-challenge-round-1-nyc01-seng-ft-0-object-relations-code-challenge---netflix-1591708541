@@ -57,8 +57,7 @@ methods if needed.
 
 Deliverables use the notation `#` for instance methods, and `.` for class methods.
 
-Some of the methods listed are provided to you in the starter code. You should check that they work 
-correctly, and that you understand them.
+Some of the methods listed are provided to you in the starter code. You should check that they work correctly, and that you understand them.
 
 ### Initializers, Readers, and Writers
 

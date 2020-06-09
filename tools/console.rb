@@ -10,6 +10,13 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
+les_miserables = Movie.new("les miserables")
+
+rebecca = Viewer.new("rebecca")
+haley = Viewer.new("haley")
+
+was_miserable = rebecca.add_review(les_miserables, "was miserable", 0)
+
 
 
 
