@@ -12,7 +12,7 @@ class Viewer
     @@all
   end
 
-  #username -returns username -- not nececsarry with accessor? 
+  #username -returns username -- not nececsarry with accessor 
   #end 
 
   def reviews #returns array of review instances associated with viewer instance
@@ -32,8 +32,6 @@ class Viewer
       false
     end
   end
-  
-
 
   def rate_movie (movie, rating) 
     if self.reviewed_movie? (movie) == false #if viewer and movie are not already associated

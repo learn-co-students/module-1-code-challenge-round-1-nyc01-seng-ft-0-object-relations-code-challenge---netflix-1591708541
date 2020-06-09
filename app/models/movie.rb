@@ -12,7 +12,7 @@ class Movie
     @@all
   end
 
-  #title returns the movie title -- not necessary with accessor? 
+  #title returns the movie title -- not necessary with accessor 
   #end 
 
   def reviews #returns array of all review instances for movie
@@ -26,6 +26,7 @@ class Movie
   end 
 
   def average_rating #return avg of all ratings for movie instance
+    #need to first iterate over reviews array to just get the @rating but did not have time | 11:10 stop
     reviews.sum(0.0) / reviews.size #get sum of reviews array and divide it by total reviews
     #reference: https://andycroll.com/ruby/calculate-a-mean-average-from-a-ruby-array/ 
   end 
