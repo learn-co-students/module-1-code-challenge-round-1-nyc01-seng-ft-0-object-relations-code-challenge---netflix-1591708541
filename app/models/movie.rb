@@ -8,6 +8,14 @@ class Movie
     @@all << self
   end
 
+  def reviews
+    Review.all.select{|review| review.movie == self}
+  end
+
+  def reviewers
+    self.reviews.map{|review| review.viewer}
+  end
+
   def self.all
     @@all
   end
