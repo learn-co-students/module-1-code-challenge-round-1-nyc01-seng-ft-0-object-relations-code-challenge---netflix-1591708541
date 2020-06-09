@@ -15,8 +15,15 @@ class Review
         @@all 
     end 
 
-    def viewer
-        Review.all.select {|review| review.viewer == self}
+    
+    def viewer 
+        Review.all.select {|review| review == self} 
     end 
+
+    def movie
+        Review.all.select {|review| review == self}
+    end 
+
+
 end
 
