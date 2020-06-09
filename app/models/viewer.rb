@@ -20,13 +20,11 @@ class Viewer
     reviews.map {|review| review.movie}
   end
 
-    #returns true if viewer has reviewed movie
-    #essentially here we want an if statement
-    #if self review movie (we defined method earlier) return true
-    #else returns false
+    #what i did here was access the class we are in and go through
+    #it to see if the viewer has reviewed the movie by calling on a 
+    #previous function we used earlier to narrow down results
   def reviewed_movie?(movie)
-      #.reviewed_movies
-  
+      @@all.all.select {|viewer| viewer.reviewed_movies == movie}
   end
 
   #so here i was able to create a way for the Viewer to leave a new
