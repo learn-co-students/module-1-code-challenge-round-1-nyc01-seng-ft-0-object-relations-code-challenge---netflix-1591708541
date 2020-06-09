@@ -20,10 +20,25 @@ class Movie
   end
 
   def reviewers
-    Review.all.select do |review|
-      if review.movie == self
-        review.viewer.name
-      end
+    reviews.map do |review|
+      review.viewer
+    end
+  end
+
+  def count_reviews
+    reviews.count
+  end
+
+  def average_rating
+    total_score = reviews.sum do |review|
+      review.rating
+    end
+    average_rating = total_score/review.count_review
+  end
+
+  def Self.highest_rated
+    reviews.max_by do |review|
+      review.movie
     end
   end
 

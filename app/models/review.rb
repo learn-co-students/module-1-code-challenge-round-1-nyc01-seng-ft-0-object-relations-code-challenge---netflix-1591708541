@@ -28,5 +28,11 @@ attr_accessor :viewer, :movie, :review, :rating
             viewer.review == self
         end
     end
+
+    def movie
+        viewer.map do |viewer|
+            viewer.movie
+        end
+    end
     
 end

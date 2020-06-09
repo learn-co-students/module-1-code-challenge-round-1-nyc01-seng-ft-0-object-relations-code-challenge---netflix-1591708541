@@ -14,7 +14,7 @@ class Viewer
     @@all
   end
 
-  def add_review(movie, review, rating = 0)
+  def rate_movie(movie, review, rating = 0)
     Review.new(self, movie, review, rating)
   end
 
