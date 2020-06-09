@@ -33,6 +33,9 @@ Review.new(viewer: berel, movie: terminator, rating: 4)
 Review.new(viewer: tashawn, movie: terminator, rating: 5)
 Review.new(viewer: berel, movie: incredible, rating: 4)
 Review.new(viewer: tashawn, movie: incredible, rating: 3)
+
+
+
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
 0
