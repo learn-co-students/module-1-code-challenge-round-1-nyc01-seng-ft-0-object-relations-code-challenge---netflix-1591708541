@@ -12,4 +12,7 @@ class Movie
     @@all
   end
 
+def self.title
+  @title
+end 
 end
