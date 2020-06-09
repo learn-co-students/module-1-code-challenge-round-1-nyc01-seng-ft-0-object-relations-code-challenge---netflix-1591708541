@@ -1,6 +1,7 @@
 class Review
 
-    attr_reader :viewer, :movie, :rating
+    attr_accessor :rating
+    attr_reader :viewer, :movie
 
     @@all = []
 

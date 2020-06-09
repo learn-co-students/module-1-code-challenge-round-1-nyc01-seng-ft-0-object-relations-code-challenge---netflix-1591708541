@@ -16,6 +16,18 @@ class Viewer
     self.reviews.map{|review| review.movie}
   end
 
+  def reviewed_movie?(movie)
+    self.reviews.include?(movie)
+  end
+
+  def rate_movie(movie, rating)
+    if self.reviewed_movie?(movie)
+      self.reviews.find{|review| review.movie = movie}.rating = rating
+    else
+      Review.new(self, movie, rating)
+    end
+  end
+
   def self.all
     @@all
   end
