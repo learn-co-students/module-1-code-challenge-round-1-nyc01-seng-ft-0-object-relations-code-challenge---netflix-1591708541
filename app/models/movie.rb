@@ -31,10 +31,10 @@ class Movie
     end
   end
 
-
-  # def self.highest_rated
-  #   self.max do |rating|
-  #     rating.
-  # end
+  def self.highest_rated
+    average_rating.max do |rating|
+      rating == self
+    end
+  end
 
 end
