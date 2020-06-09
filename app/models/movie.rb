@@ -25,12 +25,15 @@ class Movie
   end
 
   def average_rating
-      avg = reviews.rating.sum / reviews.count #add up all ratings from the array that the reviews produces. Then divide that sum by the amount of elements in that array
+      Review.all.map do |review| #add up all ratings from the array that the reviews produces. Then divide that sum by the amount of elements in that array
+        review.rating += sum
+      end
+      avg = sum / Review.all.count 
       avg #return the average
   end
 
   def highest_rated
-      average_rating #uses the average_rating method
+      average_rating #uses the average_rating method and compares each avg rating to the other (prob starting at a min avg of 0)
 
   end
 
