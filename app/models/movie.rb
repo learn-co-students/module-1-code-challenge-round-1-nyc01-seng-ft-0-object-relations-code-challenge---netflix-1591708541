@@ -16,7 +16,7 @@ class Movie
 def self.title
   @title
 end 
-def self.average_rating
+def average_rating
   Review.rating / rating 
 end
 
