@@ -21,27 +21,22 @@ class Movie
   end
   
   def average_rating
-    
-    (ratings.sum.to_f / ratings.count) if ratings.count > 0## tashawn, why do I need the parenthses?
+    ratings.count > 0 ? (ratings.sum.to_f / ratings.count) : 0
   end
   
-  def self.highest_rated
-    rs = all.map { |m| m.average_rating}.compact
-    
-    # binding.pry
-    
-    rs.max
-  end
   
-
-
-
-
+  
+  
+  
+  
   ##  CLASS METHODS  ##
   def self.all
     @@all
   end
-
+  
+  def self.highest_rated
+    all.max_by { |m| m.average_rating }
+  end
 
   
 
