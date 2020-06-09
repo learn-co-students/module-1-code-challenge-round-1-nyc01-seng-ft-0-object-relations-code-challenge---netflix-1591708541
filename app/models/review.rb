@@ -6,14 +6,14 @@
 #------------------------------------------------------------------------
 
 
-# - `Review#initialize(viewer, movie, rating)`
-#   - `Review` is initialized with a `Viewer` instance, a `Movie` instance, and a rating (number)
+    # - `Review#initialize(viewer, movie, rating)`
+    #   - `Review` is initialized with a `Viewer` instance, a `Movie` instance, and a rating (number)
 
-# - `Review#rating`
-#   - returns the rating for the `Review` instance
+    # - `Review#rating`
+    #   - returns the rating for the `Review` instance
 
-# - `Review.all`
-#   - returns an array of all initialized `Review` instances
+    # - `Review.all`
+    #   - returns an array of all initialized `Review` instances
 
 # - `Review#viewer`
 #   - returns the `Viewer` instance associated with the `Review` instance
@@ -24,6 +24,36 @@
 
 
 class Review
+
+    attr_reader :movie, :viewer
+
+    # class variable contains each Review instance
+    @@all = []
+
+    def initialize(viewer, movie, rating)
+        @viewer = viewer
+        @movie  = movie
+        @rating = rating
+        
+        @@all << self
+    end
+
+    # class method returns array with each Review instance
+    def self.all
+        @@all
+    end
+
+    # returns the rating for the `Review` instance (Instance Method)
+    def rating
+        Review.all.map { |review| review.rating }
+    end
+
+    # - `Review#viewer`
+    #   - returns the `Viewer` instance associated with the `Review` instance
+    # def viewer
+    #     Review.all.select { |review|  }
+    # end
+
 
 
 end

@@ -6,12 +6,12 @@
 #------------------------------------------------------------------------
 
 
-# - `Viewer#initialize(username)`
-#   - `Viewer` is initialized with a username (string)
-#   - username **can be** changed after the Viewer is initialized
+  # - `Viewer#initialize(username)`
+  #   - `Viewer` is initialized with a username (string)
+  #   - username **can be** changed after the Viewer is initialized
 
-# - `Viewer#username`
-#   - returns the Viewer's username
+  # - `Viewer#username`
+  #   - returns the Viewer's username
 
 # - `Viewer.all`
 #   - returns an array of all the Viewer instances that have been initialized
@@ -34,6 +34,7 @@
 #------------------------------------------------------------------------
 
 class Viewer
+
   attr_accessor :username
 
   @@all = []
@@ -46,5 +47,13 @@ class Viewer
   def self.all
     @@all
   end
+
+  # - `Viewer#username`
+  #   - returns the Viewer's username
+  def username
+    self
+  end
+
+
   
 end
