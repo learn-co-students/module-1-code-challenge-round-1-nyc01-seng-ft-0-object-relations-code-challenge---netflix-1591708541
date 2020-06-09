@@ -23,5 +23,18 @@ class Viewer
       review.movie 
     end
   end
+
+  def reviewed_movie?(movie)
+    self.reviewed_movies.find do |el|
+      if el == movie
+        return true
+      else
+        return false
+      end
+    end
+  end
+  
+
+
   
 end
