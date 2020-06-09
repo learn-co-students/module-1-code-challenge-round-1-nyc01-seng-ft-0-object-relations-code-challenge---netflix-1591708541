@@ -33,18 +33,21 @@ class Movie
   sum.to_f / self.reviews.length.to_f
   end
 
-
+def self.highest_rated
+  highest = Review.all.max_by{|rev_obj| rev_obj.rating}
+  highest.movie
+end
 
 end
 
 
 # #### Movie
 
-    # - `Movie#average_rating`
-#   - returns the average of all ratings for the `Movie` instance
-#   - to average ratings, add all ratings together and divide by the total number of ratings.
-# - `Movie.highest_rated`
-#   - returns the `Movie` instance with the highest average rating.
+      # - `Movie#average_rating`
+      #   - returns the average of all ratings for the `Movie` instance
+      #   - to average ratings, add all ratings together and divide by the total number of ratings.
+      # - `Movie.highest_rated`
+      #   - returns the `Movie` instance with the highest average rating.
 
 
 #### Movie

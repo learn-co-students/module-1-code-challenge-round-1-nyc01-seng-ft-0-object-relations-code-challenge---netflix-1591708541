@@ -36,6 +36,10 @@ class Viewer
     end
   end
   
+  def find_review(movie)
+    self.reviews.find{|rev_obj| rev_obj.movie == movie}
+  end
+
   # def rate_movie(movie,rating)
   #   if self.reviewed_movie?(movie) == true
   #     self.reviews.each do|rev_obj| 
