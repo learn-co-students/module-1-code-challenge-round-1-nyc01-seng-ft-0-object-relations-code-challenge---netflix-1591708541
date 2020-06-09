@@ -12,12 +12,12 @@ class Movie
     @@all
   end
 
-  def title
-    Movie.all.select do |title|
-    title.movie == self
-    end
+  # def title
+  #   Movie.all.select do |title|
+  #   title.movie == self
+  #   end
 
-  end
+  # end
 
   def reviews
     Review.all.select {|review| review.movie == self}

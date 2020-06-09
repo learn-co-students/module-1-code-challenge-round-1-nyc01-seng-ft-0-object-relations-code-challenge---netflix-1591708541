@@ -21,6 +21,9 @@ class Viewer
     reviews.map {|rating| rating.movie}
   end
 
+  def reviewed_movie?(movie)
+    reviewed = Reviews.all.select|review| 
+  end
 end
 
 
