@@ -20,8 +20,20 @@ class Movie
     }
   end
 
+  def average_rating
+    total = 0
+    self.reviews.map { |review|
+      total += review.rating
+    }
+    total.to_f/self.reviews.count #forcing floating point division here jic
+  end
+
   def self.all
     @@all
+  end
+
+  def self.highest_rated
+    self.all.max_by{ |movie| movie.average_rating } #returns movie instance with highest rating
   end
 
 end
