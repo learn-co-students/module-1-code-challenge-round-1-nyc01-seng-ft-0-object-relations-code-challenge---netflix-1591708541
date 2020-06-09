@@ -1,3 +1,4 @@
+require'pry'
 class Viewer
   attr_accessor :username
 
@@ -12,4 +13,23 @@ class Viewer
     @@all
   end
   
+
+  def reviews
+  	Review.all.select{|review|review.viewer == self}
+  end
+
+  def reviewed_movies
+  	reviews.map{|review| review.movie}
+  end
+
+  def reviewed_movie?(movie)
+  	if reviewed_movies[0] == movie
+  		true
+  	else
+  		false
+
+  	end
+  end
+
+
 end

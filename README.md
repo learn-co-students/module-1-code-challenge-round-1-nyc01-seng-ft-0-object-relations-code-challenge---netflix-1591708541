@@ -46,32 +46,31 @@ Some of the methods listed are provided to you in the starter code. You should c
 
 #### Movie
 
-- `Movie#initialize(title)`
   - `Movie` is initialized with a title (string)
-  - title **can be** changed after the `Movie` is initialized
-- `Movie#title`
+  - title **can be** changed after the `Movie` is initialized 
+- `Movie#title`  
   - returns the `Movie`'s title
-- `Movie.all`
-  - returns an array of all the `Movie` instances that have been initialized
+- `Movie.all`✅
+  - returns an array of all the `Movie` instances that have been initialized ✅
 
 #### Viewer
 
 - `Viewer#initialize(username)`
-  - `Viewer` is initialized with a username (string)
+  - `Viewer` is initialized with a username (string)✅
   - username **can be** changed after the Viewer is initialized
-- `Viewer#username`
+- `Viewer#username` ✅
   - returns the Viewer's username
-- `Viewer.all`
+- `Viewer.all` ✅
   - returns an array of all the Viewer instances that have been initialized
 
 #### Review
 
 - `Review#initialize(viewer, movie, rating)`
-  - `Review` is initialized with a `Viewer` instance, a `Movie` instance, and a rating (number)
+  - `Review` is initialized with a `Viewer` instance, a `Movie` instance, and a rating (number)✅
 - `Review#rating`
-  - returns the rating for the `Review` instance
+  - returns the rating for the `Review` instance✅
 - `Review.all`
-  - returns an array of all initialized `Review` instances
+  - returns an array of all initialized `Review` instances✅
 
 ### Object Relationship Methods
 
