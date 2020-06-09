@@ -29,7 +29,7 @@ class Movie
     rating / reviews.length
   end
 
-  def self.highest_rated
+  def self.highest_rated 
 
   end
 
