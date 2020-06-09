@@ -12,6 +12,17 @@ class Viewer
     @@all
   end
 
+  def reviews
+    Review.all.map do |i|
+      i.viewer == self
+    end
+  end
+
+  def reviewed_movies
+    reviews.map do |i|
+      i.movie
+  end
+
 end
 # - `Viewer#reviews`
 #   - returns an array of `Review` instances associated with the `Viewer` instance.
