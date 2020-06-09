@@ -17,6 +17,13 @@ movie_three = Movie.new("Parasite")
 movie_one.title
 Movie.all
 
+viewer_one = Viewer.new("max")
+viewer_two = Viewer.new("tashawn")
+viewer_three = Viewer.new("eric")
+
+viewer_one.username
+Viewer.all
+
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
 0
