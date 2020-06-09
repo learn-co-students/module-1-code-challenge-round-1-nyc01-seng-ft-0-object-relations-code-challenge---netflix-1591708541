@@ -24,7 +24,7 @@ class Movie
   #of the reviews and adding them all up with sum. I then divided by the total
   # of ratings
   def average_rating
-    self.all.select {|movie| movie.review.length}.sum / .length
+    self.all.select {|movie| movie.review.length}.sum / @@all.length
 
   end
   

@@ -16,18 +16,4 @@ class Review
         @@all
     end
 
-    def viewer
-        #need to return viewer
-        #associated with review
-
-
-    end
-
-    def movie
-        #need to return movie 
-        #associated with review
-
-    end
-
-
 end
