@@ -11,5 +11,9 @@ class Viewer
   def self.all
     @@all
   end
+
+  def username
+    @username
+  end
   
 end
