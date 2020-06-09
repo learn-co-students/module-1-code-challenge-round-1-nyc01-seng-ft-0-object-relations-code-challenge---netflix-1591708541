@@ -21,7 +21,7 @@ class Viewer
   end
 
   def reviewed_movie?(movie)
-    Movie.all.select{|review| review.review == self}
+    self.review.all.select{|review| review.movie}
   end
 
   def rate_movie(movie, rating)

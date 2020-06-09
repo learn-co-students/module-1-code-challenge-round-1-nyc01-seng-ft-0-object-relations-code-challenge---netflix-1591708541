@@ -21,7 +21,7 @@ class Movie
   end
 
   def average_rating
-    rating.sample
+    rating.average
   end
 
   def self.highest_rated
