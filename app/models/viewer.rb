@@ -33,7 +33,5 @@ class Viewer
   def reviewed_movie?(movie)
     reviewed_movies.include? 'movie'
   end
-
-
   
 end
