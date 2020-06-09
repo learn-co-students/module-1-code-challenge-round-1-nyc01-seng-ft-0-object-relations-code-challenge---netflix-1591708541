@@ -14,7 +14,9 @@ class Movie
 
 
   def title
-   movie.all.select{|title| title.movie == self}
+    Movie.all.select do |movie|
+    movie.title == self
+    end
   end
 
 
