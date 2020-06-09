@@ -45,14 +45,14 @@ class Review
 
     # returns the rating for the `Review` instance (Instance Method)
     def rating
-        Review.all.map { |review| review.rating }
+        self
     end
 
-    # - `Review#viewer`
-    #   - returns the `Viewer` instance associated with the `Review` instance
-    # def viewer
-    #     Review.all.select { |review|  }
-    # end
+    - `Review#viewer`
+      - returns the `Viewer` instance associated with the `Review` instance
+    def viewer
+        Review.all.select { |review|  }
+    end
 
 
 
