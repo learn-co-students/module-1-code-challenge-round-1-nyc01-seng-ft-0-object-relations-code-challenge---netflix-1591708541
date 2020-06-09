@@ -1,7 +1,6 @@
 class Review
 
-    attr_reader :viewer, :movie
-    attr_accessor :rating 
+    attr_accessor :rating, :viewer, :movie 
 
     @@all = []
     
@@ -16,11 +15,13 @@ class Review
         @@all
     end 
 
-    def viewer #returns the viewer instance associated with review instance
+    def viewers #returns the viewer instance associated with review instance | altered method name for stack level too deep error 
         self.viewer #calling single instance and viewer reader method
     end 
+    
+     
 
-    def movie #returns movie instance associated with review instance 
+    def movies #returns movie instance associated with review instance | altered method name for stack level too deep error 
         self.movie #calling single instance and movie reader method
     end 
 
