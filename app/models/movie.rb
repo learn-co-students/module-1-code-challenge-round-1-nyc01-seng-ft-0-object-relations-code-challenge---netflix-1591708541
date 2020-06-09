@@ -19,4 +19,12 @@ class Movie
   def reviewers
     Viewer.all.select {|movie| movie.movie = self}
   end
+
+  def average_rating
+    rating.sample
+  end
+
+  def self.highest_rated
+    
+  end
 end
