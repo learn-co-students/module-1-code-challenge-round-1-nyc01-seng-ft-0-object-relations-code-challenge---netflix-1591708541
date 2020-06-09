@@ -1,5 +1,3 @@
-require "pry"
-
 class Viewer
   attr_accessor :username
 
@@ -36,13 +34,17 @@ class Viewer
   end
 
   def rate_movie(movie, rating)
-    Review.all.select do |review|
-      if review.viewer == self
+    Review.all.map do |review|
+      if review.viewer == self #if you find a review that i authored, change my rating to the given rating
         review.rating = rating
-        if review.viewer != self
-
-        end
       end
+      if review.viewer != self #if you cant find my rating, create one
+        Review.new(self, movie, rating)
+      end
+    end
+  end
+
+
 
   
 
