@@ -1,12 +1,12 @@
 class Review
     #sst class
 
-    atrr_reader :viewer, :movie, :rating
+    attr_reader :viewer, :movie, :rating
 
     @@all = []
 
     def initialize(viewer, movie, rating)
-        @review = review
+        @viewer = viewer
         @movie = movie
         @rating = rating
         @@all << self
