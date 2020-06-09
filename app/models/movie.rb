@@ -25,6 +25,6 @@ class Movie
   end
 
   def self.highest_rated
-    
+    average_rating.find{|highest_average| highest-average.movie == self}
   end
 end
