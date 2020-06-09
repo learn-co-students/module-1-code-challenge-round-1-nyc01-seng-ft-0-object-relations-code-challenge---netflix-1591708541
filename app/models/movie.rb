@@ -23,7 +23,7 @@ class Movie
   def average_rating
     total = 0
     self.reviews.map { |review|
-      total += review.rating
+      total += review.rating #this is probably a chunky way to do this
     }
     total.to_f/self.reviews.count #forcing floating point division here jic
   end
