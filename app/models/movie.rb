@@ -25,12 +25,12 @@ class Movie
   end
 
   def average_rating
-      avg = reviews.rating.sum/ reviews.count #add up all ratings from the array that the reviews produces. Then divide that sum by the amount of elements in that array
+      avg = reviews.rating.sum / reviews.count #add up all ratings from the array that the reviews produces. Then divide that sum by the amount of elements in that array
       avg #return the average
   end
 
   def highest_rated
-      average_rating 
+      average_rating #uses the average_rating method
 
   end
 
