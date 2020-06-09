@@ -14,5 +14,23 @@ class Review
         @@all
     end
 
+    def rating
+        Review.all.select do |review|
+            review.rating
+        end
+    end
+
+    def viewer
+        Review.all.select do |review|
+            review.viewer
+        end
+    end
+
+    def movie
+        Review.all.select do |review|
+            review.movie
+        end
+    end    
+
 
 end
