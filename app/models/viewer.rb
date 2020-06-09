@@ -23,5 +23,14 @@ class Viewer
       false
     end 
   end 
+
+  def rate_movie(movie, rating)
+    !if self.movie
+    Review.new
+  else 
+    Review.rating
+  end
+end
+
   
 end
