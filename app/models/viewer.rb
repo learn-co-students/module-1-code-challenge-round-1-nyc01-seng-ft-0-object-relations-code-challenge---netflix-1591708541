@@ -5,11 +5,12 @@ class Viewer
 
   def initialize(username)
     @username = username
-    self.class.all << self
+    # self.class.all << self    I have no idea what this is.
+    @@all << self
   end
 
   def self.all
-    @@all
+    @@all 
   end
   
 end

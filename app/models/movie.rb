@@ -5,7 +5,8 @@ class Movie
 
   def initialize(title)
     @title = title
-    self.class.all << self
+    # self.class.all << self    I have no idea what this is.
+    @@all << self
   end
 
   def self.all
