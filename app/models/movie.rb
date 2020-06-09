@@ -27,8 +27,4 @@ class Movie
     Movie.all.max_by { |movie| movie.average_rating }
   end
 
-  #def title
-  #  @title
-  #end
-
 end

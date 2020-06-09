@@ -14,18 +14,4 @@ class Review
     @@all
   end
 
-  #def viewer
-  #  @viewer
-  #end
-#
-  #def movie
-  #  @movie 
-  #end
-#
-  #def rating
-  #  @rating
-  #end
-
-
-
 end

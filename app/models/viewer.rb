@@ -30,8 +30,4 @@ class Viewer
     .map{ |review| review.rating = rating }
   end
 
-  #def username
-  #  @username
-  #end
-  
 end
