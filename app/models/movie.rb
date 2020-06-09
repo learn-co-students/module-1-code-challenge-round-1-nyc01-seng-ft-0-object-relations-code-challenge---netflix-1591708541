@@ -26,9 +26,9 @@ class Movie
   end
   
   def self.highest_rated
-    rs = all.map { |m| m.average_rating}
+    rs = all.map { |m| m.average_rating}.compact
     
-    binding.pry
+    # binding.pry
     
     rs.max
   end
