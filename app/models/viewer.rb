@@ -29,7 +29,10 @@ class Viewer
 
   #so here i was able to create a way for the Viewer to leave a new
   #review, however i have to figure out how to assign it
-  #to to the existing review
+  #to to the existing review. I think what i would do is an if statement 
+  #so if self.movie does not qual reviewed movie then allow user to
+  #enter new review, then if viewer has already reviewed it we would
+  #shovel it into the existing review instance
   
   def rate_movie(movie,rating)
     Review.new(movie,self,rating)

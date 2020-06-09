@@ -12,10 +12,12 @@ class Movie
     @@all
   end
 
+    #returns an array of all the review instances = to view instance
+    # by going to review class here
   def reviews
     Review.all.select {|review| review.movie == self}
   end
-
+    #
   def reviewers
     reviews.map {|review| review.viewer}
   end
