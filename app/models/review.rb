@@ -27,6 +27,15 @@ class Review
 
 
 end
+
+
+
+
+
+
+
+
+### Object Relationship Methods
 # - `Review#viewer`
 #   - returns the `Viewer` instance associated with the `Review` instance
 # - `Review#movie`

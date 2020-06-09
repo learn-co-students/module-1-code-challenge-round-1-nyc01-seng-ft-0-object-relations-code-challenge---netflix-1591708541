@@ -9,9 +9,9 @@ end
 # Insert code here to run before hitting the binding.pry
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
-
-
-
+viewer = Viewer.new("TJORDAN")
+movie1 = Movie.new("random")
+viewer.rate_movie(movie1, 5)
 
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
