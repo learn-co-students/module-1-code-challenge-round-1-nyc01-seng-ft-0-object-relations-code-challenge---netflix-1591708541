@@ -12,7 +12,10 @@ end
 
 trolls = Movie.new("Trolls")
 
-trolls.title
+alex = Viewer.new("alexpac27")
+
+a_review = Review.new(alex,trolls,7)
+
 
 
 

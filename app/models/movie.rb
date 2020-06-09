@@ -12,9 +12,16 @@ class Movie
     @@all
   end
 
-  def title
-    self.title
-  end
+  # def title=(title)     <----exist bc of attr_accessor
+  #   @title = title
+  # end
+
+  # def title     <----exist bc of attr_accessor
+  #   @title
+  # end
+
+
+
 
 end
 
@@ -26,7 +33,7 @@ end
         # - `Movie#initialize(title)`
         #   - `Movie` is initialized with a title (string)
         #   - title **can be** changed after the `Movie` is initialized
-# - `Movie#title`
-#   - returns the `Movie`'s title
-# - `Movie.all`
-#   - returns an array of all the `Movie` instances that have been initialized
+        # - `Movie#title`
+        #   - returns the `Movie`'s title
+          # - `Movie.all`
+          #   - returns an array of all the `Movie` instances that have been initialized
